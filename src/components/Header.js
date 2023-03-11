@@ -5,7 +5,9 @@ const Header = (props) => {
   return (
     <header className="rounded-top">
       <Navigation changePage={props.changePage} />
-      <h1 className="text-center pt-5 pb-3">{props.person["name"]}</h1>
+      <h1 className="text-center pt-5 pb-3">
+        {props.person ? props.person["name"] : "Luke PsyWalker"}
+      </h1>
     </header>
   );
 };

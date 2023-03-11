@@ -10,6 +10,7 @@ import saveToLocalStorage from "./utils/saveToLocalStorage";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.updatePersons();
 
     this.state = {
       activePage: "",
@@ -32,17 +33,19 @@ class App extends Component {
       saveToLocalStorage("persons", await getPersonsFromBack());
     }
   }
-  async componentDidMount() {
-    await this.updatePersons();
-  }
+  // async componentDidMount() {
+  //   await this.updatePersons();
+  // }
 
   getActivePerson() {
-    const persons = JSON.parse(loadFromLocalStorage("persons"))["data"];
+    if (loadFromLocalStorage("persons")) {
+      const persons = JSON.parse(loadFromLocalStorage("persons"))["data"];
 
-    const activePersonId = persons.findIndex((item) => {
-      return item["id"] === this.state.activePersonId;
-    });
-    return structuredClone(persons[activePersonId]);
+      const activePersonId = persons.findIndex((item) => {
+        return item["id"] === this.state.activePersonId;
+      });
+      return structuredClone(persons[activePersonId]);
+    }
   }
 
   render() {
