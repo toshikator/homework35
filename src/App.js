@@ -6,6 +6,8 @@ import React, { Component } from "react";
 import loadFromLocalStorage from "./utils/loadFromLocalStorage";
 import getPersonsFromBack from "./utils/getPersonsFromBack";
 import saveToLocalStorage from "./utils/saveToLocalStorage";
+import getPlanetsFromBack from "./utils/getPlanetsFromBack";
+// import updatePlanets from "./utils/updatePlanetList";
 
 class App extends Component {
   constructor(props) {
@@ -33,9 +35,18 @@ class App extends Component {
       saveToLocalStorage("persons", await getPersonsFromBack());
     }
   }
-  // async componentDidMount() {
-  //   await this.updatePersons();
-  // }
+  updatePlanets = async () => {
+    const oldPlanets = JSON.parse(loadFromLocalStorage("planets"));
+    if (
+      !oldPlanets ||
+      Date.now() - Date(oldPlanets["date"]) > 30 * 24 * 60 * 60 * 1000
+    ) {
+      saveToLocalStorage("planets", await getPlanetsFromBack());
+    }
+  };
+  async componentDidMount() {
+    await this.updatePlanets();
+  }
 
   getActivePerson() {
     if (loadFromLocalStorage("persons")) {
