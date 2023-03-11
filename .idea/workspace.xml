@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f14bd1b1-3848-4c7c-8523-6bfd717aff7b" name="Changes" comment="navigation changed in name of the Person">
-      <change afterPath="$PROJECT_DIR$/src/components/PlanetSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getPlanetsFromBack.js" afterDir="false" />
+    <list default="true" id="f14bd1b1-3848-4c7c-8523-6bfd717aff7b" name="Changes" comment="PlanetList in process">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlanetSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlanetSelect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <workItem from="1678476342050" duration="1069000" />
       <workItem from="1678477424017" duration="917000" />
       <workItem from="1678478357161" duration="6902000" />
-      <workItem from="1678518413549" duration="11996000" />
+      <workItem from="1678518413549" duration="12527000" />
     </task>
     <task id="LOCAL-00001" summary="navigation changed in name of the Person">
       <created>1678527748016</created>
@@ -89,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678527748016</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PlanetList in process">
+      <created>1678533030243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678533030243</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +104,7 @@
     </ignored-roots>
     <MESSAGE value="second try" />
     <MESSAGE value="navigation changed in name of the Person" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigation changed in name of the Person" />
+    <MESSAGE value="PlanetList in process" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlanetList in process" />
   </component>
 </project>

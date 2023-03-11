@@ -24,9 +24,7 @@ class PlanetSelect extends Component {
     Object.entries(structuredClone(obj["data"])).forEach((elem) => {
       planetList.push(elem[1]["name"]);
     }, []);
-    return structuredClone(planetList).map((element) => {
-      <option value={element}>element</option>;
-    });
+    return structuredClone(planetList);
   }
 
   render() {
@@ -34,10 +32,17 @@ class PlanetSelect extends Component {
       <div>
         <label htmlFor="planet">Planet</label>
         <select id="planet" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-          {this.getPlanetList()}
+          <option value="australia" disabled>
+            Choose your planet
+          </option>
+
+          {this.getPlanetList().map((elem) => {
+            return (
+              <option key={elem} value={elem}>
+                {elem}
+              </option>
+            );
+          })}
         </select>
       </div>
     );
