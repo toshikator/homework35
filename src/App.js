@@ -48,7 +48,10 @@ class App extends Component {
   render() {
     return (
       <div className={"container-fluid"}>
-        <Header changePage={this.changeActivePage} />
+        <Header
+          changePage={this.changeActivePage}
+          person={this.getActivePerson()}
+        />
         <Main page={this.state.activePage} person={this.getActivePerson()} />
         <Footer />
       </div>
